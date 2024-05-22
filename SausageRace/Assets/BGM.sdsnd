@@ -1,0 +1,8 @@
+!Sound
+Id: 67c305f8-60bf-45bf-8947-2eae8f0a6169
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/bg.mp3
+CompressionRatio: 1
+StreamFromDisk: false
+Spatialized: false

@@ -1,0 +1,8 @@
+!Sound
+Id: c2cadf12-93d0-4323-acec-63c2afbc734e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/countdown-3-96619.mp3
+CompressionRatio: 1
+StreamFromDisk: false
+Spatialized: false

@@ -1,0 +1,15 @@
+!Model
+Id: 6995d115-4b70-4618-8178-af5c9ccaa342
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/man.obj
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    398b8a8b5e8ad61486bd811e6c24c38c:
+        Name: DefaultMaterial
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    6df16ae6ca7080c1d3c36a54a16cd764~../Resources/man.obj: 5430fc0b2c4bf5bffc2f98645c3828a7

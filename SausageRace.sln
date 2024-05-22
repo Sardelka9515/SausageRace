@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SausageRace.Windows", "SausageRace.Windows\SausageRace.Windows.csproj", "{EAFA90BC-E4B0-4D7F-BDAF-F12B178FD5D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SausageRace", "SausageRace\SausageRace.csproj", "{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAFA90BC-E4B0-4D7F-BDAF-F12B178FD5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFA90BC-E4B0-4D7F-BDAF-F12B178FD5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFA90BC-E4B0-4D7F-BDAF-F12B178FD5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFA90BC-E4B0-4D7F-BDAF-F12B178FD5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

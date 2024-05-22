@@ -1,0 +1,7 @@
+!Texture
+Id: 24e7a5ec-265a-4f32-a697-9a298e71547f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/128575563-wooden-texture-kitchen-table-close-up-background.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

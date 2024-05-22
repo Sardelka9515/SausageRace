@@ -1,0 +1,12 @@
+!Skeleton
+Id: a0bc33e2-f7a9-417f-b685-197152948886
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/fork.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    32cd20e1aac34c6fb15cf76231daabdd: {Name: RootNode, Depth: 0}
+    c702ae133d127c083148ec6de0098608: {Name: fork, Depth: 1}
+    edf1c4aada0908d6b41b0f179e0afe77: {Name: Camera, Depth: 1}
+~SourceHashes:
+    624e69c99012b665f689951777047f49~../Resources/fork.fbx: 419047f6d0dc3b3391d4abb31fed1928

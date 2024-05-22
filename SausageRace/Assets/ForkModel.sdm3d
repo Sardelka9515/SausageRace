@@ -1,0 +1,15 @@
+!Model
+Id: fb36e746-f4e0-4fb6-9355-b61197c439cd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/fork.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    0faede08e05dfb419a3bc7add94fbf38:
+        Name: Material
+        MaterialInstance:
+            Material: 9e840c8c-6b00-46de-af97-697e9d2779a6:Sphere Material
+Modifiers: {}
+~SourceHashes:
+    c9e773cfa30a4d930d42d1651b195626~../Resources/fork.fbx: 419047f6d0dc3b3391d4abb31fed1928

@@ -1,0 +1,279 @@
+!SceneAsset
+Id: 36e20944-48e5-4514-b94d-511cf5314dd7
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 8f55c27e-df60-4c7a-81e9-ca8ddfcc4728
+        - ref!! d1e19cc0-520c-4da3-8631-41d7ce38925f
+        - ref!! afa7693f-7f8b-42c7-a600-b2cde3c3d201
+        - ref!! c57562a6-0e85-41c4-ae86-e3d8c6d5e4bf
+        - ref!! b4b44666-1335-4ffb-9cec-8053414a02be
+        - ref!! 1ffeffb6-0a6c-4ccb-8eb7-1d685afe2117
+        - ref!! 1eedae08-3ad7-4443-bd3d-aab6d4b7f8ca
+        - ref!! 61a797b3-31a4-4d9d-889b-4f9d84aa2094
+        - ref!! 1fada7b2-74ff-4629-9a44-57d8f15542c6
+        - ref!! 0f63a5d7-cbef-4795-8134-1df764f8509b
+    Parts:
+        -   Entity:
+                Id: 0f63a5d7-cbef-4795-8134-1df764f8509b
+                Name: Page
+                Components:
+                    800237cbfd35b66c3b609a86423d0424: !TransformComponent
+                        Id: 1ccb3f9d-bf71-47bb-9a5f-ab3879d2dd41
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6c6b6f615f1eb8ffebb66bb2d8f8b640: !UIComponent
+                        Id: f66efb55-6559-45df-ac38-bd4fcb72eb81
+                        Page: 25500535-ff2e-4f4d-8f86-7b40eee100b1:Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+        -   Entity:
+                Id: 1eedae08-3ad7-4443-bd3d-aab6d4b7f8ca
+                Name: SausageLeg
+                Components:
+                    076c1c7d4570f2646c4f95d01249b560: !TransformComponent
+                        Id: 9e81f61a-d607-4163-a014-97c0614b28cc
+                        Position: {X: -6.6265664, Y: 5.0, Z: -33.00036}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b3017029f428b7fb3beded604b6ec771: !ModelComponent
+                        Id: 3425dc78-a3e3-4d99-9161-83d1e31e6341
+                        Model: 766bb28e-fe23-4ceb-bd23-b3196f7de2ff:SausageLeg
+                        Materials: {}
+                    1bc7e1f468875aaa5d95122250c432e8: !RigidbodyComponent
+                        Id: 587a3be6-f0d3-4b5a-93c9-0cc66e52f7ea
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            e226ab1636d0239e9d24ab2899baa4d7: !CapsuleColliderShapeDesc
+                                Length: 0.6
+                                Radius: 0.35
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 1fada7b2-74ff-4629-9a44-57d8f15542c6
+                Name: man
+                Components:
+                    09b244aee48d8b634c45793fe55a97a4: !TransformComponent
+                        Id: 37781495-b439-4d40-a948-8b0e455d72f5
+                        Position: {X: -2.2153754, Y: 0.0, Z: -27.6933}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5ba4a3d622aa9f54837053ab1739e63c: !ModelComponent
+                        Id: 7acefae1-5e80-41a1-8d44-c60b358fd8d9
+                        Model: 6995d115-4b70-4618-8178-af5c9ccaa342:ManModel
+                        Materials:
+                            0e55b3391713a0999c011c74242c8021~0: 4faf209d-6069-40af-95f3-2ba7b9cffef1:Yellow
+                    9776a3949bab6b1d07896450856905ce: !RigidbodyComponent
+                        Id: 2387b810-f253-4289-910f-70bf50843468
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9e0eea78bb26120e9134827b6c84331b: !ColliderShapeAssetDesc
+                                Shape: ec52ad8e-539a-4520-a877-e7c17e40af96:ManCollider
+        -   Entity:
+                Id: 1ffeffb6-0a6c-4ccb-8eb7-1d685afe2117
+                Name: Race
+                Components:
+                    0bccfd3a726d320290483b6d73c1978b: !TransformComponent
+                        Id: 1dac8cd1-ccaf-4bc7-a310-3553b07dde19
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    db3309301f11279eebfa9a65c66f5873: !SausageRace.RaceScript,SausageRace
+                        Id: 632fd942-cd21-43a5-acf1-fe59a54eaf50
+                        Winner: null
+                        UIPage: null
+                        TB: null
+        -   Entity:
+                Id: 61a797b3-31a4-4d9d-889b-4f9d84aa2094
+                Name: Fork
+                Components:
+                    582c9940c5a86a0c929f749806e138d0: !TransformComponent
+                        Id: 137710c3-b999-487c-9e9f-b0d5f912ad53
+                        Position: {X: 0.0, Y: 1.9634995, Z: -40.752937}
+                        Rotation: {X: 0.0, Y: 0.7071067, Z: -0.7071067, W: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    af59e04e7a1de5d7ed238adda34e2d4b: !ModelComponent
+                        Id: 787c12c4-caa0-4d67-b013-a7cce81b6fef
+                        Model: fb36e746-f4e0-4fb6-9355-b61197c439cd:ForkModel
+                        Materials:
+                            711381ba7575e67222dbf8776c97b9ea~0: 9e840c8c-6b00-46de-af97-697e9d2779a6:Sphere Material
+                    871616c8be79abea8d1a3b7460045f70: !RigidbodyComponent
+                        Id: 7fa75cd2-4a4d-41ca-92a0-cff4f4780333
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            04f2400098287b6abb355d2e9a004424: !ColliderShapeAssetDesc
+                                Shape: 91a0b662-01f6-4069-b828-93e17efa00d7:ForkCollider
+        -   Entity:
+                Id: 8f55c27e-df60-4c7a-81e9-ca8ddfcc4728
+                Name: Camera
+                Components:
+                    cf74cc26603d80b8a897789032c9d3ab: !TransformComponent
+                        Id: 8e5f7e33-0121-4bff-94e0-6a62db111080
+                        Position: {X: 0.0, Y: 35.0, Z: 45.0}
+                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    002574116f1476810c1c566e64ffc36a: !CameraComponent
+                        Id: a0a151d3-047e-4e21-8448-e62226a26238
+                        Name: null
+                        Projection: Orthographic
+                        OrthographicSize: 25.0
+                        Slot: d80b1eda-0a56-4cbf-a715-fcc2e29d8857
+                    5bd3962d0e282f28b6b6832dc90b828d: !SausageRace.BasicCameraController,SausageRace
+                        Id: 02cf24c5-d051-4459-896d-a0e238c9a601
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+        -   Entity:
+                Id: afa7693f-7f8b-42c7-a600-b2cde3c3d201
+                Name: Skybox
+                Components:
+                    4acdb70b889b89dd053cf06bc2d45635: !TransformComponent
+                        Id: c25a5d3f-c55f-4353-b98f-a0ef8cd5df51
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    85280e36306b57e89e5acdbf00a5c0df: !BackgroundComponent
+                        Id: 2a5bc0ef-c913-427f-a400-b0ace0e87084
+                        Texture: 88301302-efcd-458a-9554-fa8386c23ad4:Skybox texture
+                    5dd87e0238dbba857c58850130055a90: !LightComponent
+                        Id: 8bcceacf-bcc7-42e1-843f-c3b784a6dc26
+                        Type: !LightSkybox
+                            Skybox: b746b0ea-62e8-46e2-9422-362a5f6d8b4a:Skybox
+        -   Entity:
+                Id: b4b44666-1335-4ffb-9cec-8053414a02be
+                Name: End
+                Components:
+                    ea0ede9b16058034652173e2c09c2f0a: !TransformComponent
+                        Id: 132228b9-03a4-4e3a-b767-4e2ce5f11616
+                        Position: {X: 300.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 5.0, Y: 5.0, Z: 5.0}
+                        Children: {}
+                    8bc867bae9b9c0910d753e3e113764b9: !ModelComponent
+                        Id: 3b24220b-bf9f-44c2-b7e1-9f5fb5f78e34
+                        Model: b25fa429-39c9-4fd8-b18c-5d4a8d3afb88:SausageBody
+                        Materials:
+                            4d7867478ed95b9941b08b1aeec7a302~0: 9e3d64e1-3af2-48b2-bb99-2782f5de30d3:SausageSkin
+                    c1fa627221e9d9a9dcac45f850c29716: !StaticColliderComponent
+                        Id: 8410d923-c632-487b-add7-6a1c5fc5bd21
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            f3703b2662bb837b9bcb762789e0bb10: !CapsuleColliderShapeDesc
+                                Length: 4.0
+                                Radius: 0.7
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: c57562a6-0e85-41c4-ae86-e3d8c6d5e4bf
+                Name: Ground
+                Components:
+                    d8049c5c0c94117bb2c36b5f9ea901c5: !TransformComponent
+                        Id: 0f95d77f-2ab4-4856-bddb-b95477a2a833
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3b7f67775dd75c688575b91e0cad623e: !ModelComponent
+                        Id: 87adccfd-1748-451b-b4b8-0f5e931c7b41
+                        Model: a2b7019f-4302-49f3-b979-987ac4fc096a:Ground
+                        Materials: {}
+                    029fcca9e1386693ee3242b8e5b18ff0: !StaticColliderComponent
+                        Id: f2ec96d1-5ed8-42c3-aff0-2bd8c3386688
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            78b75a21ba7cfd159cb1da35bf38d2c8: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: d1e19cc0-520c-4da3-8631-41d7ce38925f
+                Name: Directional light
+                Components:
+                    0a42824cdefa6fac09d45291426f9e08: !TransformComponent
+                        Id: 27c9c2c7-163b-47e9-b49f-fb764888d6be
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 4.1269587E-08, Y: -0.32955074, Z: -0.9441379, W: -1.4405118E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    274b3cbc3106de281645ec7dacad853b: !LightComponent
+                        Id: dcaff860-3dae-4efe-834a-6e34f5beeeaa
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow: !LightDirectionalShadowMap
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0

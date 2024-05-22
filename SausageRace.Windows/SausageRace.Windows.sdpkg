@@ -1,0 +1,22 @@
+!Package
+SerializedVersion: {Assets: 3.1.0.0}
+Meta:
+    Name: SausageRace.Windows
+    Version: 1.0.0
+    Authors: []
+    Owners: []
+    Dependencies: null
+AssetFolders:
+    -   Path: !dir Assets
+ResourceFolders:
+    - !dir Resources
+OutputGroupDirectories: {}
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 4be7e25a-204e-4a39-905a-b921e046715d:Blue
+    - 6269dd58-08a3-4f4c-9fdb-00e069165a9a:Green
+    - 67c305f8-60bf-45bf-8947-2eae8f0a6169:BGM
+    - c1362ccf-3faf-4af8-9600-874cd017bedb:Black
+    - c2cadf12-93d0-4323-acec-63c2afbc734e:Countdown
