@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Stride.Audio;
 using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
+using Stride.Input;
 using Stride.Physics;
 using Stride.Rendering;
-using Stride.Core;
-using System.Collections.Specialized;
-using SharpDX.DXGI;
 using Stride.UI.Controls;
-using Stride.Audio;
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SausageRace
 {
@@ -101,7 +98,7 @@ namespace SausageRace
                         TB.Text = "Ready";
                         while (!Input.IsKeyPressed(Keys.Space)) { await Script.NextFrame(); }
 
-                        bgm.Volume = 3; 
+                        bgm.Volume = 3;
                         for (int i = 0; i < 3; i++)
                         {
                             cd.Stop();

@@ -1,9 +1,5 @@
-﻿using Stride.Engine;
-using Stride.Engine.Processors;
+﻿using Stride.Engine.Processors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SausageRace
