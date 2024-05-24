@@ -1,6 +1,7 @@
 ﻿using Stride.Audio;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Engine.Processors;
 using Stride.Input;
 using Stride.Physics;
 using Stride.Rendering;
@@ -18,6 +19,12 @@ namespace SausageRace
         public Entity Entity;
         public RigidbodyComponent Body;
     }
+
+    public class Meat
+    {
+        public Entity Entity;
+        public RigidbodyComponent Body;
+    }
     public class Sausage
     {
         public static Random Rand = new();
@@ -31,11 +38,16 @@ namespace SausageRace
         public RigidbodyComponent ManCollider;
         public Entity FrontLeg;
         public Entity RearLeg;
+        public bool Boosting;
         public void Run()
         {
             var power = -80 + (Rand.NextSingle() - 0.5f) * 20;
-            FrontLeg.Get<RigidbodyComponent>().ApplyTorque(new(0, 0, power));
-            RearLeg.Get<RigidbodyComponent>().ApplyTorque(new(0, 0, power));
+            FrontLeg.Get<RigidbodyComponent>().ApplyTorqueImpulse(new(0, 0, power * 0.05f));
+            RearLeg.Get<RigidbodyComponent>().ApplyTorqueImpulse(new(0, 0, power * 0.05f));
+            if (Boosting)
+            {
+                BodyCollider.ApplyImpulse(new(50, 0, 0));
+            }
         }
     }
     public class RaceScript : AsyncScript
@@ -44,6 +56,7 @@ namespace SausageRace
 
         List<Sausage> Sausages = [];
         List<Fork> Forks = [];
+        List<Meat> Meats = [];
         Entity Camera;
         Entity End;
         StaticColliderComponent EndCollider;
@@ -58,9 +71,12 @@ namespace SausageRace
         public UIPage UIPage;
         public TextBlock TB;
 
+        float first;
         Sound CountdownSound;
         Sound BGMSound;
         ColliderShape ForkCollider;
+        ColliderShape MeatCollider;
+        CameraComponent Cam;
         public override async Task Execute()
         {
             ManMaterials = [Content.Load<Material>("Black"), Content.Load<Material>("Blue"), Content.Load<Material>("Green"), Content.Load<Material>("Yellow")];
@@ -76,13 +92,18 @@ namespace SausageRace
                 if (Camera != null && End != null)
                 {
                     ForkCollider = Entity.Scene.Entities.First(e => e.Name == "Fork").Get<RigidbodyComponent>().ColliderShape;
-                    Camera.Get<CameraComponent>().OrthographicSize = 30;
+                    MeatCollider = Entity.Scene.Entities.First(e => e.Name == "Meat").Get<RigidbodyComponent>().ColliderShape;
+                    Cam ??= Camera.Get<CameraComponent>();
+                    Cam.OrthographicSize = 20;
+                    Cam.VerticalFieldOfView = 35;
+                    Cam.Projection = CameraProjectionMode.Perspective;
                     if (EndCollider == null)
                     {
                         EndCollider = End.Get<StaticColliderComponent>();
                         EndCollider.Collisions.CollectionChanged += Collisions_CollectionChanged;
                         TB = (TextBlock)UIPage.RootElement.VisualChildren.First(c => c is TextBlock);
                         TB.Text = "";
+                        this.GetSimulation().PreTick += FixedUpdate;
                     }
                     if (Input.IsKeyPressed(Keys.Space))
                     {
@@ -115,13 +136,12 @@ namespace SausageRace
                         Racing = true;
                     }
                     // Do stuff every new frame
-                    float first = 0;
+                    first = 0;
 
                     if (Racing)
                     {
                         foreach (var sausage in Sausages)
                         {
-                            sausage.Run();
                             var x = sausage.Body.Transform.Position.X;
                             if (x > first)
                             {
@@ -132,46 +152,81 @@ namespace SausageRace
                         }
                         Camera.Transform.Position.X = first;
                     }
-                    foreach (var fork in Forks)
-                    {
-                        if ((fork.Body.LinearVelocity + fork.Body.AngularVelocity).LengthSquared() < 0.1)
-                        {
-                            Entity.Scene.Entities.Remove(fork.Entity);
-                        }
-                    }
+                    //foreach (var fork in Forks)
+                    //{
+                    //    if ((fork.Body.LinearVelocity + fork.Body.AngularVelocity).LengthSquared() < 0.1)
+                    //    {
+                    //        Entity.Scene.Entities.Remove(fork.Entity);
+                    //    }
+                    //}
                     _elapsed += Game.UpdateTime.WarpElapsed.TotalSeconds;
                     while (_ticked * _tickInterval < _elapsed)
                     {
-                        if (Racing && _ticked % 10 == 0 && Sausages.Any() && Sausage.Rand.Next(5) < 2)
-                        {
-
-                            var target = Sausages[Sausage.Rand.Next(Sausages.Count)];
-                            var x = target.Body.Transform.Position.X;
-                            SpawnFork(new(first + 3 + (Sausage.Rand.NextSingle() - 0.5f) * 20f, 50, Sausage.Rand.Next(0, Dist * Sausages.Count)));
-                        }
                         _ticked++;
-                        if (!Racing)
-                        {
-                            if (Winner != null)
-                            {
-                                Winner.BodyCollider.ApplyImpulse(new((End.Transform.Position.X - 5 - Winner.Body.Transform.Position.X) * 10, 0, 0));
-                                if (Winner.Body.Transform.Position.Y < 10)
-                                {
-                                    Winner.BodyCollider.ApplyImpulse(new(0, 50, 0));
-                                }
-                            }
-                            //if (bgm.PlayState == Stride.Media.PlayState.Playing && bgm.Volume > 0)
-                            //{
-                            //    bgm.Volume -= 0.01f;
-                            //}
-                            //if (bgm.Volume <= 0)
-                            //{
-                            //    bgm.Stop();
-                            //}
-                        }
+                    }
+                    if (Winner != null && !Racing)
+                    {
+                        Camera.Transform.Rotation = Quaternion.BetweenDirections(Vector3.UnitZ, Camera.Transform.Position - Winner.Body.Transform.Position);
                     }
                 }
                 await Script.NextFrame();
+            }
+        }
+
+        private void FixedUpdate(Simulation sender, float tick)
+        {
+            foreach (var sausage in Sausages)
+            {
+                sausage.Run();
+            }
+            if (Sausage.Rand.Next(0, 200) == 0)
+            {
+                var ordered = Sausages.OrderByDescending(s => s.Body.Transform.Position.X)
+                    .Where(s => s.Body.Transform.WorldMatrix.Up.Y > 0.5f);
+                if (ordered.Any())
+                {
+                    var toBoost = ordered.Last();
+                    toBoost.Boosting = true;
+                    Script.Scheduler.Add(async () =>
+                    {
+                        await Script.Wait(new(0, 0, 3));
+                        toBoost.Boosting = false;
+                    });
+                }
+            }
+            if (Racing && _ticked % (int)float.Lerp(30, 5, first / End.Transform.Position.X) == 0 && Sausages.Any() && Sausage.Rand.Next(5) < 2)
+            {
+
+                var target = Sausages[Sausage.Rand.Next(Sausages.Count)];
+                var x = target.Body.Transform.Position.X;
+                SpawnFork(new(first + 3 + (Sausage.Rand.NextSingle() - 0.5f) * 20f, 50, Sausage.Rand.Next(0, Dist * Sausages.Count)));
+            }
+            if (!Racing)
+            {
+                if (Winner != null)
+                {
+                    Winner.BodyCollider.ApplyImpulse(new((End.Transform.Position.X - 5 - Winner.Body.Transform.Position.X) * 10, 0, 0));
+                    if (Winner.Body.Transform.Position.Y < 10)
+                    {
+                        Winner.BodyCollider.ApplyImpulse(new(0, 50, 0));
+                    }
+
+                    foreach (var m in Meats)
+                    {
+                        var target = Winner.Body.Transform.Position + Vector3.UnitY * 10;
+                        var f = target - m.Entity.Transform.Position;
+                        //if (f.LengthSquared() < 10)
+                        //{
+                        //    continue;
+                        //}
+                        //f += new Vector3(Sausage.Rand.Next(-5, 5), Sausage.Rand.Next(-5, 5), Sausage.Rand.Next(-5, 5));
+
+                        var min = Vector3.One * -10;
+                        var max = Vector3.One * 10;
+                        Vector3.Clamp(ref f, ref min, ref max, out var f2);
+                        m.Body.ApplyImpulse(f2);
+                    }
+                }
             }
         }
 
@@ -220,6 +275,34 @@ namespace SausageRace
             }
         }
 
+
+
+        public Meat SpawnMeat(Vector3 pos)
+        {
+            var model = Content.Load<Model>("MeatModel");
+            var body = new RigidbodyComponent()
+            {
+                ColliderShape = MeatCollider,
+                Restitution = 0.5f,
+                Mass = 20
+            };
+            Entity e = new()
+            {
+                new ModelComponent(model),
+                body
+            };
+            e.Transform.Position = pos;
+            Entity.Scene.Entities.Add(e);
+            body.UpdatePhysicsTransformation();
+            const int range = 10;
+            body.ApplyImpulse(new(Sausage.Rand.Next(-range, range), Sausage.Rand.Next(-range, range), Sausage.Rand.Next(-range, range)));
+            body.ApplyTorqueImpulse(new(Sausage.Rand.Next(-range, range), Sausage.Rand.Next(-range, range), Sausage.Rand.Next(-range, range)));
+            return new()
+            {
+                Entity = e,
+                Body = body
+            };
+        }
         public Entity SpawnFork(Vector3 pos)
         {
             var forkModel = Content.Load<Model>("ForkModel");
@@ -261,9 +344,14 @@ namespace SausageRace
             {
                 es.Remove(f.Entity);
             }
+            foreach (var f in Meats)
+            {
+                es.Remove(f.Entity);
+            }
             Forks.Clear();
+            Meats.Clear();
             Sausages.Clear();
-            Camera.Get<CameraComponent>().OrthographicSize = 20;
+            Cam.OrthographicSize = 20;
             Camera.Transform.Position = new(0, 35, 45);
             Camera.Transform.RotationEulerXYZ = new(MathUtil.GradiansToRadians(-45), MathUtil.GradiansToRadians(10), 0);
 
@@ -272,7 +360,12 @@ namespace SausageRace
                 Sausages.Add(
                     SpawnSausage(new Vector3(0, 5, i * Dist),
                     ManMaterials[i % 4]));
+            }
 
+            for (int i = 0; i < 50; i++)
+            {
+                var pos = new Vector3(Sausage.Rand.Next((int)End.Transform.Position.X / 2, (int)End.Transform.Position.X), 55, Sausage.Rand.Next(0, sausageCount * Dist));
+                Meats.Add(SpawnMeat(pos));
             }
         }
         public Sausage SpawnSausage(Vector3 origin, Material manMat)

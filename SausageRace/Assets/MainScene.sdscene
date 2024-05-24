@@ -16,6 +16,7 @@ Hierarchy:
         - ref!! 61a797b3-31a4-4d9d-889b-4f9d84aa2094
         - ref!! 1fada7b2-74ff-4629-9a44-57d8f15542c6
         - ref!! 0f63a5d7-cbef-4795-8134-1df764f8509b
+        - ref!! 67a00038-8a36-4602-9486-3480292141b7
     Parts:
         -   Entity:
                 Id: 0f63a5d7-cbef-4795-8134-1df764f8509b
@@ -152,6 +153,39 @@ Hierarchy:
                             04f2400098287b6abb355d2e9a004424: !ColliderShapeAssetDesc
                                 Shape: 91a0b662-01f6-4069-b828-93e17efa00d7:ForkCollider
         -   Entity:
+                Id: 67a00038-8a36-4602-9486-3480292141b7
+                Name: Meat
+                Components:
+                    11b189d4a39b2a114dd0644429b6d62f: !TransformComponent
+                        Id: b4206042-2336-4ffd-8608-ee6796a9e8f3
+                        Position: {X: 0.9526367, Y: 0.0, Z: -19.82552}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    63acdf05e656e3ccb3cbbfd70e918c96: !ModelComponent
+                        Id: 13d5ff48-8c4c-47c3-bd93-e124b723ec68
+                        Model: b66a170b-14b5-434f-b6f8-a87f7a24a12e:MeatModel
+                        Materials: {}
+                    0f9aeffe183e1c25d14e11332a9f2400: !RigidbodyComponent
+                        Id: 661eeda8-e693-4c83-ab35-1d44f1985596
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            cd9db9a7a07019a71c28f3dd062fc7c0: !ColliderShapeAssetDesc
+                                Shape: 685d658b-aea4-4ef6-b508-5ac264423e5f:MeatCollider
+        -   Entity:
                 Id: 8f55c27e-df60-4c7a-81e9-ca8ddfcc4728
                 Name: Camera
                 Components:
@@ -237,7 +271,8 @@ Hierarchy:
                     3b7f67775dd75c688575b91e0cad623e: !ModelComponent
                         Id: 87adccfd-1748-451b-b4b8-0f5e931c7b41
                         Model: a2b7019f-4302-49f3-b979-987ac4fc096a:Ground
-                        Materials: {}
+                        Materials:
+                            ae48e7a4270951b9a55314839a9e7406~0: c1362ccf-3faf-4af8-9600-874cd017bedb:Black
                     029fcca9e1386693ee3242b8e5b18ff0: !StaticColliderComponent
                         Id: f2ec96d1-5ed8-42c3-aff0-2bd8c3386688
                         CanSleep: false

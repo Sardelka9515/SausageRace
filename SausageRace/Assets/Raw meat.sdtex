@@ -1,0 +1,7 @@
+!Texture
+Id: dfff55c8-8235-4310-949d-f0bd48b4c73b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Raw meat.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

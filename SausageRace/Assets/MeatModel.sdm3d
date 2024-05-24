@@ -1,0 +1,15 @@
+!Model
+Id: b66a170b-14b5-434f-b6f8-a87f7a24a12e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/meat.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    c6c3860e59920b41e34a629b53f180be:
+        Name: Meat
+        MaterialInstance:
+            Material: dfe8ac9c-b46e-4d13-b683-da5c6d4cad0f:Meat
+Modifiers: {}
+~SourceHashes:
+    bbabf0d6f7cf807f65a96e011f9fd6ce~../Resources/meat.fbx: 548dba23649fa81f0df3300e2538b3c4

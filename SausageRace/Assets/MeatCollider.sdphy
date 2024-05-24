@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 685d658b-aea4-4ef6-b508-5ac264423e5f
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    bb7f0cd9290742a0250bed94d113d1eb: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: b66a170b-14b5-434f-b6f8-a87f7a24a12e:MeatModel
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 10
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: false
