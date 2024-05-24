@@ -5,6 +5,7 @@ Tags: []
 Source: !file ../Resources/fork.fbx
 Skeleton: null
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+ScaleImport: 2.0
 Materials:
     0faede08e05dfb419a3bc7add94fbf38:
         Name: Material

@@ -1,0 +1,13 @@
+!Model
+Id: 89a24148-b30e-4429-a72a-ab0f6492a5b7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../StrideAssets/StrideAssets/Resources/Stand/plateC.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    7f976df9321207671389e3331389e333:
+        Name: blinn2
+        MaterialInstance:
+            Material: 219e0c43-1fe7-42ce-9aa8-65aaa0023eb5:Materials/PolishedStone
+Modifiers: {}

@@ -115,9 +115,6 @@ Hierarchy:
                         Children: {}
                     db3309301f11279eebfa9a65c66f5873: !SausageRace.RaceScript,SausageRace
                         Id: 632fd942-cd21-43a5-acf1-fe59a54eaf50
-                        Winner: null
-                        UIPage: null
-                        TB: null
         -   Entity:
                 Id: 61a797b3-31a4-4d9d-889b-4f9d84aa2094
                 Name: Fork

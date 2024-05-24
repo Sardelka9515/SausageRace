@@ -1,0 +1,17 @@
+!Model
+Id: d6eb9b8a-c70a-4d55-8da5-9dc32528d6bd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../StrideAssets/StrideAssets/Resources/Models/MaterialModel.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    ebc0cfec026ffd470b819cfcb1ca2cbf:
+        Name: MaterialA
+        MaterialInstance:
+            Material: adf8fc52-f54b-48d8-b883-e4b78e774d99:Materials/MaterialA
+    07d84ca53b7823d8fcdf7c46dab24576:
+        Name: MaterialB
+        MaterialInstance:
+            Material: bf37ab1b-21d6-4ebc-a644-70166ff957d9:Materials/MaterialB
+Modifiers: {}

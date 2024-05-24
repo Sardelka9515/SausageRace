@@ -14,5 +14,6 @@ namespace SausageRace
                 await s.NextFrame();
             }
         }
+        public static async Task Wait(this ScriptSystem s, float t) => await s.Wait(new TimeSpan(0, 0, 0, 0, (int)(t * 1000)));
     }
 }

@@ -15,8 +15,11 @@ ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
 RootAssets:
+    - 22ae5484-30af-4633-8e35-a4f5a177188e:VFXPrefabs/vfx-Explosion
     - 4be7e25a-204e-4a39-905a-b921e046715d:Blue
     - 6269dd58-08a3-4f4c-9fdb-00e069165a9a:Green
     - 67c305f8-60bf-45bf-8947-2eae8f0a6169:BGM
+    - 67f0d9a3-3e9f-41b3-a925-1a4b32c42b40:VFXPrefabs/vfx-MeteoriteTrail
+    - 9e1d6d59-1cc9-4b02-a361-ab87625e508a:VFXPrefabs/vfx-Boost
     - c1362ccf-3faf-4af8-9600-874cd017bedb:Black
     - c2cadf12-93d0-4323-acec-63c2afbc734e:Countdown

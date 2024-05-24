@@ -8,6 +8,15 @@ Hierarchy:
     RootParts:
         - !Grid ref!! 5548a6cd-a835-4003-ae64-23b1d0ad3be4
     Parts:
+        -   UIElement: !StackPanel
+                Id: 011468a7-c1f2-4365-ac26-a08d9d1ebf49
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children: {}
         -   UIElement: !TextBlock
                 Id: 18a1e8d2-c8fd-4f48-b4e4-2be228dbecbe
                 DependencyProperties: {}
@@ -20,7 +29,7 @@ Hierarchy:
                 Text: 3
                 Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
                 TextSize: 100.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid
                 Id: 5548a6cd-a835-4003-ae64-23b1d0ad3be4
@@ -31,7 +40,22 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
+                    0c1724f06dcc54c0fd0f339b0cc0b357: !Grid ref!! f4751de9-f466-4c6a-b1a5-e59f0e5e7bcb
                     ccfd59dc89262f74ae2dfa065be089f3: !TextBlock ref!! 18a1e8d2-c8fd-4f48-b4e4-2be228dbecbe
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: f4751de9-f466-4c6a-b1a5-e59f0e5e7bcb
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    5dbe5cc8196fbb3ca08a2dfbcbd44fb0: !StackPanel ref!! 011468a7-c1f2-4365-ac26-a08d9d1ebf49
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
