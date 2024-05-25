@@ -111,7 +111,7 @@ namespace SausageRace
         Entity Ground;
 
         static Int2[] Resolutions =
-            [new(3840, 2160), new(1920, 1080), new(1280, 720), new(1024, 480),new(800,600), new(640, 480)];
+            [new(3840, 2160), new(1920, 1080), new(1280, 720), new(1024, 480), new(800, 600), new(640, 480)];
         StackPanel ResPanel;
         public async Task Start()
         {
@@ -285,14 +285,11 @@ namespace SausageRace
             {
                 startBoost = false;
                 var ordered = Sausages.OrderByDescending(s => s.Body.Transform.Position.X)
-                    .Where(s => (s.Body.Transform.Rotation * -Vector3.UnitX).Y > 0.1f);
-                if (ordered.Any())
+                    .Where(s => (s.Body.Transform.Rotation * -Vector3.UnitX).Y > 0.1f &&
+                    first - s.Body.Transform.Position.X > 10).ToArray();
+                if (ordered.Length != 0)
                 {
-                    var s = ordered.Last();
-                    if (first - s.Body.Transform.Position.X > 10)
-                    {
-                        Boost(s, 1f);
-                    }
+                    Boost(ordered[Sausage.Rand.Next(0, ordered.Length)], 1f);
                 }
             }
             if (Racing && _ticked % (int)float.Lerp(60, 20, first / End.Transform.Position.X) == 0 && Sausages.Any() && Sausage.Rand.Next(5) < 2)
