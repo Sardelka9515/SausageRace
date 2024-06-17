@@ -11,3 +11,5 @@ Materials:
         MaterialInstance:
             Material: c7b90dbc-191c-4bf8-86c8-52ca659cf1e3:Materials/coinC2
 Modifiers: {}
+~SourceHashes:
+    808a3db68ae208562d517a5688b6c0ae~../../../../StrideAssets/StrideAssets/Resources/Models/StrideCoin.fbx: f00d518ee22cd1edef712f91c53faceb

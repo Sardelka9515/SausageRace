@@ -19,3 +19,5 @@ Materials:
         MaterialInstance:
             Material: ba13e600-e1c8-4ba7-b66d-aa0e1489e02e:Materials/board1B
 Modifiers: {}
+~SourceHashes:
+    cc86fa22489ee95cec4f15addee009d1~../../../../StrideAssets/StrideAssets/Resources/Models/table.fbx: 75f2628b4f3fedec9a2277b336c5f756

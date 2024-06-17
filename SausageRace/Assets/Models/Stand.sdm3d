@@ -6,12 +6,14 @@ Source: !file ../../../../StrideAssets/StrideAssets/Resources/Stand/Pd_ground.FB
 Skeleton: null
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
 Materials:
-    444959dcd07ef6c7e59c8d0ee59c8d0e:
-        Name: ground_0
-        MaterialInstance:
-            Material: e4a8b81d-08ea-4561-92cc-ef5a7fef6a7d:Materials/DullSilver
     7100a7c491e7cc898821031e8821031e:
         Name: ground_1
         MaterialInstance:
             Material: b5937f37-8fa5-4c0c-9a21-9d563ee1bffc:Materials/RedCoating
+    444959dcd07ef6c7e59c8d0ee59c8d0e:
+        Name: ground_0
+        MaterialInstance:
+            Material: e4a8b81d-08ea-4561-92cc-ef5a7fef6a7d:Materials/DullSilver
 Modifiers: {}
+~SourceHashes:
+    441f55a392695cb571c7af54fc804172~../../../../StrideAssets/StrideAssets/Resources/Stand/Pd_ground.FBX: c170a2977ef51a92b83f375a71be5f26

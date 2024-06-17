@@ -82,7 +82,7 @@ Nodes:
     797183feae2a1dc78ff9f258a3ba442d: {Name: gun_bone_magazine, Depth: 8}
     ab7f2e16253d195cfe4c68a84cb3a6f5: {Name: CATRigHub001Bone002, Depth: 2}
     556491f1fd4952854a8e10e060c7fe99: {Name: backplaterightup, Depth: 2}
-    76076079d1785131d0a70b8f724c6ff8: {Name: back platerightdown, Depth: 3}
+    9872c533a220e678bf57bf964bd38f07: {Name: backplaterightdown, Depth: 3}
     af148480e3092100aa28d47c0780bdc4: {Name: CATRigRLeg1, Depth: 2}
     d4959b3852b9f010d42a21dfe8b0f501: {Name: CATRigRLeg2, Depth: 3}
     93e9ed3056414fe554b933f38e820fd6: {Name: CATRigRLegAnkle, Depth: 4}
@@ -97,3 +97,5 @@ Nodes:
     10752b434ff056c52c1b26fad37c99cf: {Name: CATRigRLegPlatform, Depth: 1}
     f56e18ef821077a1cfc8beea9d7fb036: {Name: CATRigRArmIKTarget, Depth: 1}
     149861784d2d7288eb41824229d7a683: {Name: CATRigLArmIKTarget, Depth: 1}
+~SourceHashes:
+    927007b7f7b056d6d5eaac55c44b5264~../../../../StrideAssets/StrideAssets/Resources/Models/mannequinModel.fbx: 41531d1299044bd0f0b265374610fb1d

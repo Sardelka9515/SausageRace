@@ -15,4 +15,6 @@ Skeleton: 64401578-294c-4eb2-b92f-4c0a805d7314:Models/mannequinHandModel Skeleto
 RootMotion: false
 PreviewModel: a2ee43dd-1239-4930-bd7c-6017bb263391:Models/mannequinHandModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:00.5330000
+AnimationTimeMaximum: 0:00:00:00.5333300
+~SourceHashes:
+    19f9661c37e10e1acefd833a80521d8a~../../../../StrideAssets/StrideAssets/Resources/Animation/Gun_Run.fbx: 8a3be5e2d526a0abb8e2309f8c779456

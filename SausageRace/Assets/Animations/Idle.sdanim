@@ -15,4 +15,6 @@ Skeleton: a0d324bd-326a-4fd8-88a9-fc5e4dcc62e5:Models/mannequinModel Skeleton
 RootMotion: false
 PreviewModel: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:02.6330000
+AnimationTimeMaximum: 0:00:00:02.6333300
+~SourceHashes:
+    295c4f4a90daa870f9bc7901214895f8~../../../../StrideAssets/StrideAssets/Resources/Animation/Idle.fbx: 425da9e0d3fa578a8427ead97d6200b6

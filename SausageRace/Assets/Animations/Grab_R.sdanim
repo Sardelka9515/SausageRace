@@ -16,3 +16,5 @@ RootMotion: false
 PreviewModel: 15618002-dbfc-46ba-8be9-edacd2146a9d:Models/HandModelRight
 AnimationTimeMinimum: 0:00:00:00.0000000
 AnimationTimeMaximum: 0:00:00:00.2000000
+~SourceHashes:
+    e4ea3a497b4a06c50949b3b704eb7c90~../../../../StrideAssets/StrideAssets/Resources/Animation/Grab_R.fbx: fd6cd0385dc7dd226f3ff2444035b564

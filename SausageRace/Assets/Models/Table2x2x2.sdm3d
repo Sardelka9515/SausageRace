@@ -11,3 +11,5 @@ Materials:
         MaterialInstance:
             Material: 12a5c5a3-ac04-48dc-9b6a-b15a44b0ef7f:Materials/GridMT
 Modifiers: {}
+~SourceHashes:
+    8f9b8f0ea76ba621b4087d67bb25bade~../../../../StrideAssets/StrideAssets/Resources/Models/Table2x2x2.fbx: b9d62bc68b40d14465219e0d60db89be

@@ -15,4 +15,6 @@ Skeleton: a0d324bd-326a-4fd8-88a9-fc5e4dcc62e5:Models/mannequinModel Skeleton
 RootMotion: false
 PreviewModel: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:02.6670000
+AnimationTimeMaximum: 0:00:00:02.6666600
+~SourceHashes:
+    c4f1b5f2c48b7b4f653495dbfacfc281~../../../../StrideAssets/StrideAssets/Resources/Animation/Sword_Idle.fbx: 18d165982c8d2be02e635cacd1de4b8d

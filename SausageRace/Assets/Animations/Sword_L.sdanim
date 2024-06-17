@@ -16,3 +16,5 @@ RootMotion: false
 PreviewModel: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
 AnimationTimeMinimum: 0:00:00:00.0000000
 AnimationTimeMaximum: 0:00:00:00.7000000
+~SourceHashes:
+    e4ab8e16fdec083a1e9708938fde9815~../../../../StrideAssets/StrideAssets/Resources/Animation/Sword_L.fbx: 2365a9c083adf41ff9beb9ab955604b6

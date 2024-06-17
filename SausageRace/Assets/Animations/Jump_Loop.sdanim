@@ -15,4 +15,6 @@ Skeleton: a0d324bd-326a-4fd8-88a9-fc5e4dcc62e5:Models/mannequinModel Skeleton
 RootMotion: false
 PreviewModel: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:00.9830000
+AnimationTimeMaximum: 0:00:00:00.9833300
+~SourceHashes:
+    e9ff802d9b0c0a6a7a9b3b99bbfff970~../../../../StrideAssets/StrideAssets/Resources/Animation/Jump_Loop.fbx: b578f2ccc51e7deedf81789e5911798d

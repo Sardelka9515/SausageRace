@@ -11,3 +11,5 @@ Materials:
         MaterialInstance:
             Material: 12a5c5a3-ac04-48dc-9b6a-b15a44b0ef7f:Materials/GridMT
 Modifiers: {}
+~SourceHashes:
+    89868739e16bb584bbbe8fa54104572c~../../../../StrideAssets/StrideAssets/Resources/Models/Stairs1x1x1_50.fbx: 86b5d119717c9450b290711337d5b502

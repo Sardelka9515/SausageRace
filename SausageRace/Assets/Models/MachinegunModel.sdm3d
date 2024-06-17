@@ -23,3 +23,5 @@ Materials:
         MaterialInstance:
             Material: 9d50f321-04f3-48ab-b49c-c414ef358343:Materials/BodyGray
 Modifiers: {}
+~SourceHashes:
+    b9c3260e025000139d1d216382e692a4~../../../../StrideAssets/StrideAssets/Resources/Models/MachinegunModel.fbx: f681403f434781ff4a4b3139aa4f6471

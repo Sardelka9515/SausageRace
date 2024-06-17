@@ -11,3 +11,5 @@ Materials:
         MaterialInstance:
             Material: 219e0c43-1fe7-42ce-9aa8-65aaa0023eb5:Materials/PolishedStone
 Modifiers: {}
+~SourceHashes:
+    ee6682fb17a69e941438fd1d9da6f923~../../../../StrideAssets/StrideAssets/Resources/Stand/plateC.fbx: b1ae603bb597856abb9e8d4bc846fb1e

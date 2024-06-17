@@ -15,3 +15,5 @@ Materials:
         MaterialInstance:
             Material: b4997bcf-6d3e-4715-ac60-319461df7fca:Materials/FrameA
 Modifiers: {}
+~SourceHashes:
+    9302cf06801272e6eea3dc1d0f2cae72~../../../../StrideAssets/StrideAssets/Resources/Models/StrideCrate.fbx: 6e3a5526c1cdb7001c9b7ea51ac583a0

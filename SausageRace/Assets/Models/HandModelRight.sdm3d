@@ -23,3 +23,5 @@ Materials:
         MaterialInstance:
             Material: b4152531-11a9-4174-8ec9-c1d0a3561714:Materials/MattBlackUpper
 Modifiers: {}
+~SourceHashes:
+    afc7150e4552ea8ab1b555d48ff9854b~../../../../StrideAssets/StrideAssets/Resources/Models/HandModelRight.fbx: a3d72d9e3c4237ebc9cade426869f4f6

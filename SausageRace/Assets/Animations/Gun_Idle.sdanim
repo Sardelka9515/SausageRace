@@ -15,4 +15,6 @@ Skeleton: 64401578-294c-4eb2-b92f-4c0a805d7314:Models/mannequinHandModel Skeleto
 RootMotion: false
 PreviewModel: a2ee43dd-1239-4930-bd7c-6017bb263391:Models/mannequinHandModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:01.3330000
+AnimationTimeMaximum: 0:00:00:01.3333300
+~SourceHashes:
+    234a62184ded4fcb785c432c649acd3f~../../../../StrideAssets/StrideAssets/Resources/Animation/Gun_Idle.fbx: 96380ed1ae981ead11578112b7295f0b

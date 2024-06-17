@@ -98,6 +98,7 @@ namespace SausageRace
         TextBlock TB;
 
         float first;
+        const int SausageCount = 4;
         Sound CountdownSound;
         Sound BGMSound;
         ColliderShape ForkCollider;
@@ -155,7 +156,7 @@ namespace SausageRace
                 bt.Content = text;
                 ResPanel.Children.Add(bt);
             }
-
+            AddMainButton();
             this.GetSimulation().PreTick += FixedUpdate;
 
             Ground = Entity.Scene.Entities.First(c => c.Name == "Ground");
@@ -164,6 +165,34 @@ namespace SausageRace
             ExplosionVfx = await Content.LoadAsync<Prefab>("VFXPrefabs/vfx-Explosion");
             CollisionHandlers.Add(EndCollider.ColliderShape, SausageWin);
             CollisionHandlers.Add(Ground.Get<StaticColliderComponent>().ColliderShape, ForkContact);
+        }
+        void AddMainButton()
+        {
+
+            var bt = new Button()
+            {
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch
+            };
+            var text = new TextBlock
+            {
+                Text = $"Start/Stop",
+                Visibility = Visibility.Visible,
+                Opacity = 1,
+                TextColor = Color.White,
+                BackgroundColor = Color.Black,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                Font = TB.Font,
+                TextSize = 20,
+                Margin = default,
+            };
+            bt.Click += (s, e) =>
+            {
+                touched = true;
+            };
+            bt.Content = text;
+            ResPanel.Children.Add(bt);
         }
         void ForkContact(PhysicsComponent fork, Collision col)
         {
@@ -207,8 +236,8 @@ namespace SausageRace
             ManMaterials = [Content.Load<Material>("Black"), Content.Load<Material>("Blue"), Content.Load<Material>("Green"), Content.Load<Material>("Yellow")];
             CountdownSound = Content.Load<Sound>("Countdown");
             BGMSound = Content.Load<Sound>("BGM");
-            cd = CountdownSound.CreateInstance();
-            bgm = BGMSound.CreateInstance();
+            cd = CountdownSound?.CreateInstance();
+            bgm = BGMSound?.CreateInstance();
             while (Game.IsRunning)
             {
                 Camera ??= Entity.Scene.Entities.FirstOrDefault(e => e.Name == "Camera");
@@ -226,9 +255,9 @@ namespace SausageRace
                     {
                         await Start();
                     }
-                    if (Input.IsKeyPressed(Keys.Space))
+                    if (MainControl())
                     {
-                        await StartRace(4);
+                        await StartRace(SausageCount);
                     }
                     // Do stuff every new frame
                     first = 0;
@@ -261,19 +290,22 @@ namespace SausageRace
                     }
                     if (Winner != null && !Racing)
                     {
-                        Camera.Transform.Rotation = Quaternion.BetweenDirections(Vector3.UnitZ, Camera.Transform.Position - Winner.Body.Transform.Position);
+                        LookPosition(Camera, Winner.Body.Transform.Position);
                     }
                 }
                 if (!startBoost)
                 {
-                    startBoost = Input.IsKeyPressed(Keys.Enter);
+                    startBoost = MainControl();
                     //Sausage.Rand.Next(0, 200) == 0
                 }
                 await Script.NextFrame();
             }
         }
         bool startBoost;
-
+        public static void LookPosition(Entity e, Vector3 target, bool reverse = true)
+        {
+            e.Transform.Rotation = Quaternion.BetweenDirections(Vector3.UnitZ, e.Transform.Position - target);
+        }
         private void FixedUpdate(Simulation sender, float tick)
         {
             startBoost = Sausage.Rand.Next(0, 100) == 0;
@@ -326,6 +358,17 @@ namespace SausageRace
                     }
                 }
             }
+        }
+
+        bool touched = true;
+        bool MainControl()
+        {
+            if (touched)
+            {
+                touched = false;
+                return true;
+            }
+            return Input.IsKeyPressed(Keys.Space);
         }
         private void Collisions_CollectionChanged(object sender, Stride.Core.Collections.TrackingCollectionChangedEventArgs e)
         {
@@ -429,8 +472,6 @@ namespace SausageRace
             Meats.Clear();
             Sausages.Clear();
             Cam.OrthographicSize = 20;
-            Camera.Transform.Position = new(0, 35, 45);
-            Camera.Transform.RotationEulerXYZ = new(MathUtil.GradiansToRadians(-45), MathUtil.GradiansToRadians(10), 0);
 
             for (int i = 0; i < sausageCount; i++)
             {
@@ -447,20 +488,60 @@ namespace SausageRace
 
             TB.Text = "Ready";
             await Script.NextFrame();
-            while (!Input.IsKeyPressed(Keys.Space)) { await Script.NextFrame(); }
+            int cycle = 0;
+            Vector3 start, end;
+            start = new Vector3(3, 8, 7);
+        animStart:
+            end = start;
+            end.Z += (sausageCount - 1) * Dist;
+            Camera.Transform.Position = start;
+            LookPosition(Camera, Sausages[0].Man.Transform.Position + Vector3.UnitY * 3);
+            double interpolationTime = sausageCount * 1.5;
+            double interpolated = 0;
+            while (!MainControl())
+            {
+                // Camera animation
+                interpolated += Game.UpdateTime.Elapsed.TotalSeconds;
+                if (interpolated > interpolationTime)
+                {
+                    cycle++;
+                    interpolated = 0;
+                    if (cycle % 2 == 0)
+                    {
+                        start = new Vector3(3, 8, 7);
+                    }
+                    else
+                    {
+                        start = new Vector3(-3, 8, -7);
+                    }
+                    goto animStart;
+                }
+                Camera.Transform.Position = Vector3.Lerp(start, end, (float)(interpolated / interpolationTime));
+                Cam.Update();
+                await Script.NextFrame();
+            }
 
-            bgm.Volume = 3;
+            Camera.Transform.Position = new(0, 35, 45);
+            Camera.Transform.RotationEulerXYZ = new(MathUtil.GradiansToRadians(-45), MathUtil.GradiansToRadians(10), 0);
+
+            if (bgm != null)
+            {
+                bgm.Volume = 3;
+            }
             for (int i = 0; i < 3; i++)
             {
-                cd.Stop();
-                cd.Play();
+                cd?.Stop();
+                cd?.Play();
                 TB.Text = (3 - i).ToString();
                 await Script.Wait(1);
             }
-            bgm.Stop();
-            bgm.IsLooping = true;
-            bgm.Play();
-            cd.Play();
+            if (bgm != null)
+            {
+                bgm.Stop();
+                bgm.IsLooping = true;
+                bgm.Play();
+            }
+            cd?.Play();
             TB.Text = "";
             Game.UpdateTime.Factor = 1;
             Racing = true;

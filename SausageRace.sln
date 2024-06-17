@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SausageRace.Windows", "Saus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SausageRace", "SausageRace\SausageRace.csproj", "{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SausageRace.Android", "SausageRace.Android\SausageRace.Android.csproj", "{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61DEB93C-57D7-4CD8-BD92-E0226D1CE2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153FF3F0-624B-47B8-9304-CCEA3EEA25F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

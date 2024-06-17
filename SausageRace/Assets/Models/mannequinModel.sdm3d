@@ -31,3 +31,5 @@ Materials:
         MaterialInstance:
             Material: dbf44423-b639-4e84-8eca-fcea83343296:Materials/LambertMT
 Modifiers: {}
+~SourceHashes:
+    8a003dc07aae1795922fe91fab9199d4~../../../../StrideAssets/StrideAssets/Resources/Models/mannequinModel.fbx: 41531d1299044bd0f0b265374610fb1d

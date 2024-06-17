@@ -15,4 +15,6 @@ Skeleton: 64401578-294c-4eb2-b92f-4c0a805d7314:Models/mannequinHandModel Skeleto
 RootMotion: false
 PreviewModel: a2ee43dd-1239-4930-bd7c-6017bb263391:Models/mannequinHandModel
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:00.3670000
+AnimationTimeMaximum: 0:00:00:00.3666600
+~SourceHashes:
+    d81539c8016103f86f00871b0092a0fb~../../../../StrideAssets/StrideAssets/Resources/Animation/Shoot.fbx: 3b2f08678734ad938000bdbb87f41236

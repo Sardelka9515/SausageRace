@@ -15,4 +15,6 @@ Skeleton: b906bf22-0ae2-4b1d-943e-8377d7d34303:Models/HandModelLeft Skeleton
 RootMotion: false
 PreviewModel: c2f8cb33-c6dc-4c89-86bf-8369da9e0e0f:Models/HandModelLeft
 AnimationTimeMinimum: 0:00:00:00.0000000
-AnimationTimeMaximum: 0:00:00:00.1670000
+AnimationTimeMaximum: 0:00:00:00.1666600
+~SourceHashes:
+    901a0022a4b70c565bce4c76b61ddd5a~../../../../StrideAssets/StrideAssets/Resources/Animation/release_L.fbx: 88817153358db4064992c4709736d51d

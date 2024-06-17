@@ -23,3 +23,5 @@ Materials:
         MaterialInstance:
             Material: b4152531-11a9-4174-8ec9-c1d0a3561714:Materials/MattBlackUpper
 Modifiers: {}
+~SourceHashes:
+    8d14a63d35f56e4d6f7ceb228b3a8d43~../../../../StrideAssets/StrideAssets/Resources/Models/mannequinHandModel.fbx: db1befd09793cb26baaafc47576b4e4f

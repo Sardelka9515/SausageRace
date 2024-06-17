@@ -11,3 +11,5 @@ Materials:
         MaterialInstance:
             Material: 219e0c43-1fe7-42ce-9aa8-65aaa0023eb5:Materials/PolishedStone
 Modifiers: {}
+~SourceHashes:
+    5eaae721d827979baa9c5747d1eddff8~../../../../StrideAssets/StrideAssets/Resources/Stand/standBowl.fbx: 3a9256a73afacbf5bc0852d6ae92a196

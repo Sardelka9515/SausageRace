@@ -16,3 +16,5 @@ RootMotion: false
 PreviewModel: f68ea240-695a-4de5-9884-60d77544fcd6:Models/mannequinModel
 AnimationTimeMinimum: 0:00:00:00.0000000
 AnimationTimeMaximum: 0:00:00:00.2500000
+~SourceHashes:
+    cad6116e82ee52604630081b4fbeef55~../../../../StrideAssets/StrideAssets/Resources/Animation/Jump_Start.fbx: 3deabe06e3a39a8cb5d54dcf6190bace
